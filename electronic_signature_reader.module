@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Electronic Signature Reader
+ */
+
+require_once realpath(__DIR__ . '/includes/reader.inc');

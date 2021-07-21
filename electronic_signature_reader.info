@@ -1,0 +1,17 @@
+name = Electronic Signature Reader
+description = Electronic Signature Reader
+core = 7.x
+package = Other
+; configure = admin/config/content/electronic_signature_reader
+
+; dependencies[] = node
+; dependencies[] = views
+
+stylesheets[all][] = css/electronic_signature_reader.css
+
+scripts[] = js/electronic_signature_reader.js
+
+version = "7.x-1.0"
+core = "7.x"
+project = "Electronic Signature Reader"
+datestamp = "1615908886"

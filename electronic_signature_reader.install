@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Performs database updates and uninstallation cleanup for the Electronic
+ * Signature Reader module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function electronic_signature_reader_install() {
+  db_update('system')
+    ->fields(['weight' => 100])
+    ->condition('type', 'module')
+    ->condition('name', 'electronic_signature_reader')
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function electronic_signature_reader_uninstall() {
+  cache_clear_all('electronic_signature_reader', 'cache', TRUE);
+  menu_rebuild();
+}
